@@ -1,0 +1,41 @@
+[project]
+name = "a2c-td0"
+version = "0.1.0"
+description = "A small PyTorch implementation of online TD(0) advantage actor-critic."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "pydantic>=2.10,<3",
+    "pydantic-settings>=2.8,<3",
+    "matplotlib>=3.9,<4",
+    "moviepy>=2,<3",
+    "gymnasium[classic-control,box2d]>=1.4,<2",
+    "numpy>=2,<3",
+    "torch>=2.6,<3",
+]
+
+[dependency-groups]
+dev = [
+    "pyright==1.1.414",
+    "ruff==0.17.5",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+required-version = "==0.17.5"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["I"]
+
+[tool.ruff.format]
+line-ending = "lf"
+
+[tool.pyright]
+include = ["a2c", "experiments", "tests"]
+pythonVersion = "3.12"
+typeCheckingMode = "standard"
+reportUnnecessaryTypeIgnoreComment = true
