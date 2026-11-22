@@ -155,7 +155,8 @@ tests/
 ```
 
 Pydantic validates configuration and run data. Ruff handles formatting and import
-order; Pyright checks types in standard mode.
+order; Pyright checks types in standard mode. GitHub Actions runs the same checks
+on pushes and pull requests, without modifying repository files.
 
 ```sh
 uv run --locked ruff check .
