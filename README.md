@@ -158,10 +158,10 @@ Pydantic validates configuration and run data. Ruff handles formatting and impor
 order; Pyright checks types in standard mode.
 
 ```sh
-uv run ruff check .
-uv run ruff format --check .
-uv run pyright
-uv run python -m unittest discover -s tests -v
+uv run --locked ruff check .
+uv run --locked ruff format --check .
+uv run --locked pyright
+uv run --locked python -m unittest discover -s tests -v
 ```
 
 ## License
